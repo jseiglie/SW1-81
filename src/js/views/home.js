@@ -15,11 +15,18 @@ export const Home = () => {
 				<h2>People</h2>
 				<div className="row">
 					{
-						store.people?.map(el => <Card key={el.uid} name={el.name} uid={el.uid} img={`https://starwars-visualguide.com/assets/img/characters/${el.uid}.jpg`} />)
+						store.people?.map(el => <Card key={el.uid} type={'people'} name={el.name} uid={el.uid} img={`https://starwars-visualguide.com/assets/img/characters/${el.uid}.jpg`} />)
 					}
 				</div>
 			</section>
-
+			<section>
+				<h2>Planets</h2>
+				<div className="row">
+					{
+						store.planets?.map(el => <Card key={el.uid} type={'planets'} name={el.name} uid={el.uid} img={`https://starwars-visualguide.com/assets/img/planets/${el.uid}.jpg`} />)
+					}
+				</div>
+			</section>
 
 		</div>
 	);
